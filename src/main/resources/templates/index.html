@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="add">+</button>
+<form method="POST" enctype="multipart/form-data" action="/upload">
+    <p>文件：<input type="file" name="file" /></p>
+    <p><input type="submit" value="上传" /></p>
+</form>
+
+</body>
+<script>
+    $(document).ready(function(){
+        $(".add").click(function(){
+            $('form').prepend('<p>文件：<input type="file" name="file"></p>');
+        });
+    });
+</script>
+
+</html>
